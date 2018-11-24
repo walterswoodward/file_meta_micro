@@ -32,6 +32,6 @@ server.post("/upload", upload.single("file"), (req, res, next) => {
   return res.json(req.file);
 });
 
-server.listen(5000, () => {
+server.listen(process.env.PORT || 5000, () => {
   console.log("file_meta_micro server up and running");
 });
